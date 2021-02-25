@@ -37,7 +37,6 @@ import { FilesReferencesChecking } from './_common/jobs/files-references-checkin
 import { TestingResolversModule } from './testing-resolvers/testing-resolvers.module';
 import { UserUpdatesModule } from './user-updates/user-updates.module';
 import { HelperService } from './_common/utils/helper.service';
-import { ChatService } from './chat/chat.service';
 
 @Module({
   imports: [
