@@ -27,7 +27,8 @@ export const fillUnDefinedValues = (input: IPaginateInput) => {
 
 export const paginate = async <T>(
   model: MyModelStatic,
-  input: IPaginateInput = defaultPaginateObj
+  input: IPaginateInput = defaultPaginateObj,
+  nestAndRaw = true
 ): Promise<PaginationRes<T>> => {
   let totalPages = 0,
     totalCount = 0,
@@ -56,8 +57,8 @@ export const paginate = async <T>(
     offset: skip,
     include,
     subQuery: false,
-    nest: true,
-    raw: true
+    nest: nestAndRaw,
+    raw: nestAndRaw
   });
   return {
     pageInfo: {

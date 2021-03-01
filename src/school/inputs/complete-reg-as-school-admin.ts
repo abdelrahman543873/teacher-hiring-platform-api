@@ -42,7 +42,7 @@ export class CompleteRegistrationAsSchool {
   @IsUUID('4', {
     each: true
   })
-  @Field(type => [ID])
+  @Field(() => [ID])
   curriculums: string[];
 
   @IsEnum(SchoolGenderEnum)
@@ -76,6 +76,6 @@ export class CompleteRegistrationAsSchool {
 
   @IsOptional()
   @IsString()
-  @Field({nullable: true})
+  @Field({ nullable: true })
   enAddress?: string;
 }

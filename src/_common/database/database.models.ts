@@ -13,6 +13,9 @@ import { TeacherSubject } from '../../subject/models/teacher-subject.model';
 import { TeacherCurriculum } from '../../curriculum/models/teacher-curriculum.model';
 import { File } from '../uploader/file.model';
 import { Review } from 'src/review/review.model';
+import { Chat } from '../../chat/models/chat.model';
+import { Message } from '../../chat/models/message.model';
+import { UserChat } from '../../chat/models/user-chat.model';
 
 export const models = [
   User,
@@ -29,5 +32,8 @@ export const models = [
   Subject,
   TeacherSubject,
   TeacherCurriculum,
-  Review
+  Review,
+  Chat,
+  Message,
+  UserChat
 ];

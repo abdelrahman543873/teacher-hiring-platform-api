@@ -37,6 +37,7 @@ import { FilesReferencesChecking } from './_common/jobs/files-references-checkin
 import { TestingResolversModule } from './testing-resolvers/testing-resolvers.module';
 import { UserUpdatesModule } from './user-updates/user-updates.module';
 import { HelperService } from './_common/utils/helper.service';
+import { ChatModule } from './chat/chat.module';
 
 @Module({
   imports: [
@@ -78,7 +79,8 @@ import { HelperService } from './_common/utils/helper.service';
       }),
       inject: [ConfigService]
     }),
-    UserUpdatesModule
+    UserUpdatesModule,
+    ChatModule
   ],
   providers: [
     PubSub,
